@@ -72,7 +72,6 @@
     return NO;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[_delegate connectToService:[_objects objectAtIndex:indexPath.row]];

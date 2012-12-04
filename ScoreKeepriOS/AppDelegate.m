@@ -46,7 +46,7 @@
 	_serverPickerView.delegate = self;
 	self.navigationController = [[UINavigationController alloc] initWithRootViewController:_serverPickerView];
 	
-	[[self.navigationController navigationBar] setTintColor:[UIColor vexColor]];
+	[[self.navigationController navigationBar] setTintColor:[UIColor vexRedColor]];
 	self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -171,7 +171,7 @@
 		_autonomousView = [[AutonomousViewController alloc] initWithNibName:@"AutonomousViewController" bundle:nil];
 		_autonomousView.delegate = self;
 		_modalNavigationController = [[UINavigationController alloc] initWithRootViewController:_autonomousView];
-		[[_modalNavigationController navigationBar] setTintColor:[UIColor vexColor]];
+		[[_modalNavigationController navigationBar] setTintColor:[UIColor vexRedColor]];
 		[self.navigationController presentViewController:_modalNavigationController animated:YES completion:NULL];
 	}
 	

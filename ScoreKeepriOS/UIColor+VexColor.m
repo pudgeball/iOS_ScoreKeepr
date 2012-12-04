@@ -10,7 +10,7 @@
 
 @implementation UIColor (VexColor)
 
-+ (UIColor *)vexColor
++ (UIColor *)vexRedColor
 {
 	return [UIColor colorWithRed:0.6980392157f green:0.07450980392f blue:0.07058823529f alpha:1.0f];
 }
