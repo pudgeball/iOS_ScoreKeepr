@@ -1,0 +1,18 @@
+//
+//  main.m
+//  ScoreKeepriOS
+//
+//  Created by Nicholas McGuire on 2012-11-12.
+//  Copyright (c) 2012 RND Consulting. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#import "AppDelegate.h"
+
+int main(int argc, char *argv[])
+{
+	@autoreleasepool {
+	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+	}
+}
