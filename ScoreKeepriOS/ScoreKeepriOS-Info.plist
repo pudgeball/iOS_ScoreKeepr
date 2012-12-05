@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>ScoreKeepr</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
@@ -39,11 +39,11 @@
 			<key>TintColor</key>
 			<dict>
 				<key>Blue</key>
-				<real>0.070588235294117646</real>
+				<real>0.07058823529411765</real>
 				<key>Green</key>
-				<real>0.074509803921568626</real>
+				<real>0.07450980392156863</real>
 				<key>Red</key>
-				<real>0.69803921568627447</real>
+				<real>0.6980392156862745</real>
 			</dict>
 			<key>Translucent</key>
 			<false/>

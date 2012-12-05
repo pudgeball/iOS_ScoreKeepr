@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AppDelegate;
+
 @interface DetailViewController : UIViewController
+
+@property (assign, nonatomic) AppDelegate *delegate;
 
 @end

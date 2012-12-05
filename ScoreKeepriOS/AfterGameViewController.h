@@ -13,6 +13,7 @@
 @interface AfterGameViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *contentView;
+
 @property (strong, nonatomic) IBOutlet UILabel *labelRedGreenBalls;
 @property (strong, nonatomic) IBOutlet UILabel *labelBlueGreenBalls;
 

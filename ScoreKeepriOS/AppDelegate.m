@@ -26,6 +26,8 @@
 
 @property (nonatomic) BOOL inMatch;
 
+- (void)resetInterface;
+
 @end
 
 @implementation AppDelegate
@@ -37,11 +39,6 @@
 	_server = [[Server alloc] initWithProtocol:@"Vex"];
 	_server.delegate = self;
 	
-	NSError *error;
-	if (![_server start:&error])
-	{
-		NSLog(@"Was unabled to start server: %@", error);
-	}
 	_serverPickerView = [[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil];
 	_serverPickerView.delegate = self;
 	self.navigationController = [[UINavigationController alloc] initWithRootViewController:_serverPickerView];
@@ -62,11 +59,19 @@
 {
 	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
 	// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+	NSLog(@"Headed to the background");
+	[_server stop];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+	NSLog(@"Entering ForeGround");
+	NSError *error = nil;
+	[_server start:&error];
+	if (error)
+	{
+		NSLog(@"Woah error occured when entering foreground: %@", error);
+	}
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -77,6 +82,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	NSLog(@"Exiting App");
 }
 
 - (void)connectToService:(NSNetService *)service
@@ -127,12 +133,25 @@
 	[self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (void)resetInterface
+{
+	if (_inMatch)
+	{
+		[self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+	}
+	
+	[self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - ServerDelegate
 - (void)serverRemoteConnectionComplete:(Server *)server
 {
     NSLog(@"Connected to service");
 	_inMatch = YES;
+	[_server stopBrowser];
+	
 	_waitingView = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+	_waitingView.delegate = self;
 	[self.navigationController pushViewController:_waitingView animated:YES];
 }
 
@@ -140,14 +159,7 @@
 {
     NSLog(@"Disconnected from service");
 	
-	if (!_inMatch)
-	{
-		[self.navigationController popToRootViewControllerAnimated:YES];
-	}
-	else
-	{
-		[self.navigationController dismissViewControllerAnimated:YES completion:NULL];
-	}
+	[self resetInterface];
 	
 	_inMatch = NO;
 }
@@ -189,14 +201,7 @@
 - (void)server:(Server *)server lostConnection:(NSDictionary *)errorDict
 {
 	NSLog(@"Lost connection");
-	if (!_inMatch)
-	{
-		[self.navigationController popToRootViewControllerAnimated:YES];
-	}
-	else
-	{
-		[self.navigationController dismissViewControllerAnimated:YES completion:NULL];
-	}
+	[self resetInterface];
 }
 
 - (void)serviceAdded:(NSNetService *)service moreComing:(BOOL)more

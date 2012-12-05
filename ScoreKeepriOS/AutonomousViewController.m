@@ -20,7 +20,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.title = @"Vex";
-		self.navigationItem.backBarButtonItem = nil;
     }
     return self;
 }
@@ -47,6 +46,7 @@
 	
 	NSDictionary *results = @{ @"Winner" : winner };
 	
+	self.title = @"";
 	[_delegate autonomousEndedWithOutput:results];
 }
 

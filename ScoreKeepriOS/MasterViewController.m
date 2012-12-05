@@ -33,7 +33,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
 	
+	NSError *error = nil;
+	[[_delegate server] start:&error];
+	
+	if (!error)
+	{
+		NSLog(@"Started server again");
+	}
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+	 [_objects removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,7 +21,6 @@
     if (self) {
 		NSLog(@"zomg");
 		self.title = @"Vex";
-		self.navigationItem.backBarButtonItem = nil;
     }
     return self;
 }
@@ -29,8 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-	_contentView.contentSize = CGSizeMake(320, 600);
+	
+	self.navigationItem.leftBarButtonItem = nil;
+	_contentView.contentSize = CGSizeMake(320, 715);
+	_contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+	[[self view] addSubview:_contentView];
 }
 
 - (void)didReceiveMemoryWarning

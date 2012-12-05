@@ -7,9 +7,10 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
-
+- (void)cancel;
 @end
 
 @implementation DetailViewController
@@ -17,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+	[[self navigationItem] setLeftBarButtonItem:cancelButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +35,12 @@
 		self.title = @"Connected";
     }
     return self;
+}
+
+- (void)cancel
+{
+	[[_delegate server] stop];
+	[[self navigationController] popViewControllerAnimated:YES];
 }
 							
 @end

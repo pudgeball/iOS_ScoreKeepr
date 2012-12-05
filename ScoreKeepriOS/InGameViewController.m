@@ -20,7 +20,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.title = @"Vex";
-		self.navigationItem.backBarButtonItem = nil;
     }
     return self;
 }
@@ -29,6 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	self.navigationItem.backBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +58,7 @@
 {
 	NSDictionary *results = @{ @"RedScore" : _labelRedScore.text,
 								@"BlueScore" : _labelBlueScore.text };
-	
+	self.title = @"";
 	[_delegate inGameEndedWithResults:results];
 }
 
