@@ -15,15 +15,17 @@
 		DE7397FE1667CDAE00BBB721 /* AfterGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7397FC1667CDAE00BBB721 /* AfterGameViewController.m */; };
 		DE7397FF1667CDAE00BBB721 /* AfterGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7397FD1667CDAE00BBB721 /* AfterGameViewController.xib */; };
 		DEB4D680166BDD7600B31D29 /* UIColor+VexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB4D67F166BDD7600B31D29 /* UIColor+VexColor.m */; };
+		DEC41A44166FF53E00E33932 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A3F166FF53E00E33932 /* Default-568h@2x.png */; };
+		DEC41A45166FF53E00E33932 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A40166FF53E00E33932 /* Default.png */; };
+		DEC41A46166FF53E00E33932 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A41166FF53E00E33932 /* Default@2x.png */; };
+		DEC41A47166FF53E00E33932 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A42166FF53E00E33932 /* icon.png */; };
+		DEC41A48166FF53E00E33932 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A43166FF53E00E33932 /* icon@2x.png */; };
 		DEDC63E3165167D100C071EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDC63E2165167D100C071EF /* UIKit.framework */; };
 		DEDC63E5165167D100C071EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDC63E4165167D100C071EF /* Foundation.framework */; };
 		DEDC63E7165167D100C071EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDC63E6165167D100C071EF /* CoreGraphics.framework */; };
 		DEDC63ED165167D100C071EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDC63EB165167D100C071EF /* InfoPlist.strings */; };
 		DEDC63EF165167D100C071EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC63EE165167D100C071EF /* main.m */; };
 		DEDC63F3165167D100C071EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC63F2165167D100C071EF /* AppDelegate.m */; };
-		DEDC63F5165167D100C071EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDC63F4165167D100C071EF /* Default.png */; };
-		DEDC63F7165167D100C071EF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDC63F6165167D100C071EF /* Default@2x.png */; };
-		DEDC63F9165167D100C071EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDC63F8165167D100C071EF /* Default-568h@2x.png */; };
 		DEDC63FC165167D100C071EF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC63FB165167D100C071EF /* MasterViewController.m */; };
 		DEDC63FF165167D100C071EF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC63FE165167D100C071EF /* DetailViewController.m */; };
 		DEDC6402165167D100C071EF /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDC6400165167D100C071EF /* MasterViewController.xib */; };
@@ -44,6 +46,11 @@
 		DE7397FD1667CDAE00BBB721 /* AfterGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AfterGameViewController.xib; sourceTree = "<group>"; };
 		DEB4D67E166BDD7600B31D29 /* UIColor+VexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VexColor.h"; sourceTree = "<group>"; };
 		DEB4D67F166BDD7600B31D29 /* UIColor+VexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VexColor.m"; sourceTree = "<group>"; };
+		DEC41A3F166FF53E00E33932 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		DEC41A40166FF53E00E33932 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/Default.png; sourceTree = "<group>"; };
+		DEC41A41166FF53E00E33932 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Default@2x.png"; sourceTree = "<group>"; };
+		DEC41A42166FF53E00E33932 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Images/icon.png; sourceTree = "<group>"; };
+		DEC41A43166FF53E00E33932 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Images/icon@2x.png"; sourceTree = "<group>"; };
 		DEDC63DE165167D100C071EF /* ScoreKeepriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreKeepriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDC63E2165167D100C071EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEDC63E4165167D100C071EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,9 +61,6 @@
 		DEDC63F0165167D100C071EF /* ScoreKeepriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScoreKeepriOS-Prefix.pch"; sourceTree = "<group>"; };
 		DEDC63F1165167D100C071EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEDC63F2165167D100C071EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DEDC63F4165167D100C071EF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		DEDC63F6165167D100C071EF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		DEDC63F8165167D100C071EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEDC63FA165167D100C071EF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DEDC63FB165167D100C071EF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		DEDC63FD165167D100C071EF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -79,6 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEC41A49166FF54900E33932 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A3F166FF53E00E33932 /* Default-568h@2x.png */,
+				DEC41A40166FF53E00E33932 /* Default.png */,
+				DEC41A41166FF53E00E33932 /* Default@2x.png */,
+				DEC41A42166FF53E00E33932 /* icon.png */,
+				DEC41A43166FF53E00E33932 /* icon@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DEDC63D3165167D100C071EF = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +154,11 @@
 		DEDC63E9165167D100C071EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DEC41A49166FF54900E33932 /* images */,
 				DEDC63EA165167D100C071EF /* ScoreKeepriOS-Info.plist */,
 				DEDC63EB165167D100C071EF /* InfoPlist.strings */,
 				DEDC63EE165167D100C071EF /* main.m */,
 				DEDC63F0165167D100C071EF /* ScoreKeepriOS-Prefix.pch */,
-				DEDC63F4165167D100C071EF /* Default.png */,
-				DEDC63F6165167D100C071EF /* Default@2x.png */,
-				DEDC63F8165167D100C071EF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -201,14 +215,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDC63ED165167D100C071EF /* InfoPlist.strings in Resources */,
-				DEDC63F5165167D100C071EF /* Default.png in Resources */,
-				DEDC63F7165167D100C071EF /* Default@2x.png in Resources */,
-				DEDC63F9165167D100C071EF /* Default-568h@2x.png in Resources */,
 				DEDC6402165167D100C071EF /* MasterViewController.xib in Resources */,
 				DEDC6405165167D100C071EF /* DetailViewController.xib in Resources */,
 				DE7397F41667C0BC00BBB721 /* AutonomousViewController.xib in Resources */,
 				DE7397FA1667C7BA00BBB721 /* InGameViewController.xib in Resources */,
 				DE7397FF1667CDAE00BBB721 /* AfterGameViewController.xib in Resources */,
+				DEC41A44166FF53E00E33932 /* Default-568h@2x.png in Resources */,
+				DEC41A45166FF53E00E33932 /* Default.png in Resources */,
+				DEC41A46166FF53E00E33932 /* Default@2x.png in Resources */,
+				DEC41A47166FF53E00E33932 /* icon.png in Resources */,
+				DEC41A48166FF53E00E33932 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
