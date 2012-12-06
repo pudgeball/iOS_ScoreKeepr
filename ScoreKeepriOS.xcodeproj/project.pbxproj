@@ -32,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE1D5F9E1670F61700858E71 /* ScoreKeepriOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ScoreKeepriOS-Info.plist"; path = "Resources/ScoreKeepriOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DE1D5FA11670F62300858E71 /* ScoreKeepriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScoreKeepriOS-Prefix.pch"; path = "Other Sources/ScoreKeepriOS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		DE37A279165552FE00590357 /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Server.h; path = "Vendor/Bill Dudney/Server.h"; sourceTree = "<group>"; };
 		DE37A27A165552FE00590357 /* Server.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Server.m; path = "Vendor/Bill Dudney/Server.m"; sourceTree = "<group>"; };
 		DEC41A56166FFE7C00E33932 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MasterViewController.xib; path = Resources/Interface/MasterViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -63,8 +65,6 @@
 		DEDC63E2165167D100C071EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEDC63E4165167D100C071EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDC63E6165167D100C071EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DEDC63EA165167D100C071EF /* ScoreKeepriOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ScoreKeepriOS-Info.plist"; path = "../Resources/ScoreKeepriOS-Info.plist"; sourceTree = "<group>"; };
-		DEDC63F0165167D100C071EF /* ScoreKeepriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScoreKeepriOS-Prefix.pch"; path = "../Other Sources/ScoreKeepriOS-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DEC41A49166FF54900E33932 /* images */ = {
+		DE1D5FA31671025100858E71 /* Bill Dudney */ = {
+			isa = PBXGroup;
+			children = (
+				DE37A279165552FE00590357 /* Server.h */,
+				DE37A27A165552FE00590357 /* Server.m */,
+			);
+			name = "Bill Dudney";
+			sourceTree = "<group>";
+		};
+		DE1D5FA41671028E00858E71 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DE1D5FA31671025100858E71 /* Bill Dudney */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		DE1D5FA51671029800858E71 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A711670005200E33932 /* AppDelegate.h */,
+				DEC41A721670005200E33932 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		DE1D5FA6167102AC00858E71 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DE1D5FA51671029800858E71 /* Application */,
+				DE1D5FAA1671099000858E71 /* Categories */,
+				DE1D5FA81671038200858E71 /* View Controllers */,
+				DE1D5FA71671036B00858E71 /* Views */,
+			);
+			name = Classes;
+			path = ScoreKeepriOS;
+			sourceTree = "<group>";
+		};
+		DE1D5FA71671036B00858E71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A56166FFE7C00E33932 /* MasterViewController.xib */,
+				DEC41A58166FFE9500E33932 /* DetailViewController.xib */,
+				DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */,
+				DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */,
+				DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DE1D5FA81671038200858E71 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A7A1670008300E33932 /* AfterGameViewController.h */,
+				DEC41A7B1670008300E33932 /* AfterGameViewController.m */,
+				DEC41A771670007A00E33932 /* AutonomousViewController.h */,
+				DEC41A781670007A00E33932 /* AutonomousViewController.m */,
+				DEC41A741670006600E33932 /* DetailViewController.h */,
+				DEC41A751670006600E33932 /* DetailViewController.m */,
+				DEC41A6D1670002F00E33932 /* InGameViewController.h */,
+				DEC41A6E1670002F00E33932 /* InGameViewController.m */,
+				DEC41A6A1670000D00E33932 /* MasterViewController.h */,
+				DEC41A6B1670000D00E33932 /* MasterViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DE1D5FA91671095F00858E71 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A801670009D00E33932 /* main.m */,
+				DE1D5FA11670F62300858E71 /* ScoreKeepriOS-Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = ScoreKeepriOS;
+			sourceTree = "<group>";
+		};
+		DE1D5FAA1671099000858E71 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41A7D1670008900E33932 /* UIColor+VexColor.h */,
+				DEC41A7E1670008900E33932 /* UIColor+VexColor.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DEC41A49166FF54900E33932 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				DEC41A82167000D500E33932 /* Default-568h@2x.png */,
@@ -90,15 +176,16 @@
 				DEC41A85167000D500E33932 /* icon.png */,
 				DEC41A86167000D500E33932 /* icon@2x.png */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DEDC63D3165167D100C071EF = {
 			isa = PBXGroup;
 			children = (
-				DE37A279165552FE00590357 /* Server.h */,
-				DE37A27A165552FE00590357 /* Server.m */,
-				DEDC63E8165167D100C071EF /* ScoreKeepriOS */,
+				DE1D5FA6167102AC00858E71 /* Classes */,
+				DE1D5FA91671095F00858E71 /* Other Sources */,
+				DEDC63E9165167D100C071EF /* Resources */,
+				DE1D5FA41671028E00858E71 /* Vendor */,
 				DEDC63E1165167D100C071EF /* Frameworks */,
 				DEDC63DF165167D100C071EF /* Products */,
 			);
@@ -122,42 +209,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DEDC63E8165167D100C071EF /* ScoreKeepriOS */ = {
+		DEDC63E9165167D100C071EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DEC41A711670005200E33932 /* AppDelegate.h */,
-				DEC41A721670005200E33932 /* AppDelegate.m */,
-				DEC41A6A1670000D00E33932 /* MasterViewController.h */,
-				DEC41A6B1670000D00E33932 /* MasterViewController.m */,
-				DEC41A56166FFE7C00E33932 /* MasterViewController.xib */,
-				DEC41A741670006600E33932 /* DetailViewController.h */,
-				DEC41A751670006600E33932 /* DetailViewController.m */,
-				DEC41A58166FFE9500E33932 /* DetailViewController.xib */,
-				DEDC63E9165167D100C071EF /* Supporting Files */,
-				DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */,
-				DEC41A6D1670002F00E33932 /* InGameViewController.h */,
-				DEC41A6E1670002F00E33932 /* InGameViewController.m */,
-				DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */,
-				DEC41A7A1670008300E33932 /* AfterGameViewController.h */,
-				DEC41A7B1670008300E33932 /* AfterGameViewController.m */,
-				DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */,
-				DEC41A7D1670008900E33932 /* UIColor+VexColor.h */,
-				DEC41A7E1670008900E33932 /* UIColor+VexColor.m */,
+				DEC41A49166FF54900E33932 /* Images */,
+				DE1D5F9E1670F61700858E71 /* ScoreKeepriOS-Info.plist */,
 			);
+			name = Resources;
 			path = ScoreKeepriOS;
-			sourceTree = "<group>";
-		};
-		DEDC63E9165167D100C071EF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DEC41A49166FF54900E33932 /* images */,
-				DEDC63EA165167D100C071EF /* ScoreKeepriOS-Info.plist */,
-				DEC41A801670009D00E33932 /* main.m */,
-				DEDC63F0165167D100C071EF /* ScoreKeepriOS-Prefix.pch */,
-				DEC41A771670007A00E33932 /* AutonomousViewController.h */,
-				DEC41A781670007A00E33932 /* AutonomousViewController.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,10 +358,12 @@
 		DEDC6409165167D100C071EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/ScoreKeepriOS-Prefix.pch";
 				INFOPLIST_FILE = "Resources/ScoreKeepriOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -310,10 +371,14 @@
 		DEDC640A165167D100C071EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/ScoreKeepriOS-Prefix.pch";
 				INFOPLIST_FILE = "Resources/ScoreKeepriOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
