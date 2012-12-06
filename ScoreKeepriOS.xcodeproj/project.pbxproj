@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE37A27C1655539B00590357 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = DE37A27A165552FE00590357 /* Server.m */; };
+		DE87AD4016715816000E5E72 /* NMScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE87AD3F16715816000E5E72 /* NMScoreView.m */; };
 		DEC41A57166FFE7C00E33932 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A56166FFE7C00E33932 /* MasterViewController.xib */; };
 		DEC41A59166FFE9500E33932 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A58166FFE9500E33932 /* DetailViewController.xib */; };
 		DEC41A5B166FFEE500E33932 /* AutonomousViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */; };
@@ -36,6 +37,8 @@
 		DE1D5FA11670F62300858E71 /* ScoreKeepriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScoreKeepriOS-Prefix.pch"; path = "Other Sources/ScoreKeepriOS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		DE37A279165552FE00590357 /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Server.h; path = "Vendor/Bill Dudney/Server.h"; sourceTree = "<group>"; };
 		DE37A27A165552FE00590357 /* Server.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Server.m; path = "Vendor/Bill Dudney/Server.m"; sourceTree = "<group>"; };
+		DE87AD3E16715816000E5E72 /* NMScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMScoreView.h; path = Classes/NMScoreView.h; sourceTree = SOURCE_ROOT; };
+		DE87AD3F16715816000E5E72 /* NMScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMScoreView.m; path = Classes/NMScoreView.m; sourceTree = SOURCE_ROOT; };
 		DEC41A56166FFE7C00E33932 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MasterViewController.xib; path = Resources/Interface/MasterViewController.xib; sourceTree = SOURCE_ROOT; };
 		DEC41A58166FFE9500E33932 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Resources/Interface/DetailViewController.xib; sourceTree = SOURCE_ROOT; };
 		DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AutonomousViewController.xib; path = Resources/Interface/AutonomousViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -127,6 +130,8 @@
 				DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */,
 				DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */,
 				DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */,
+				DE87AD3E16715816000E5E72 /* NMScoreView.h */,
+				DE87AD3F16715816000E5E72 /* NMScoreView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				DEC41A7C1670008300E33932 /* AfterGameViewController.m in Sources */,
 				DEC41A7F1670008900E33932 /* UIColor+VexColor.m in Sources */,
 				DEC41A811670009D00E33932 /* main.m in Sources */,
+				DE87AD4016715816000E5E72 /* NMScoreView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
