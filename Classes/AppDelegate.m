@@ -120,6 +120,25 @@
 - (void)inGameEndedWithResults:(NSDictionary *)results
 {
 	NSLog(@"InGame Ended with Results: %@", results);
+	
+	NSDictionary *message = @{ @"Type" : @"InGame", @"Red" : [results objectForKey:@"RedScore"], @"Blue" : [results objectForKey:@"BlueScore"] };
+	
+	NSError *error = nil;
+	NSData *messageData = [NSJSONSerialization dataWithJSONObject:message options:NSJSONWritingPrettyPrinted error:&error];
+	if (!error)
+	{
+		error = nil;
+		[_server sendData:messageData error:&error];
+		if (error)
+		{
+			NSLog(@"Error sending InGame message");
+		}
+	}
+	else
+	{
+		NSLog(@"Error creating JSON for InGame Message");
+	}
+	
 	_ingameView = nil;
 	_afterView = [[AfterGameViewController alloc] init];
 	_afterView.delegate = self;
@@ -129,6 +148,24 @@
 - (void)scoringCompletedWithResults:(NSDictionary *)results
 {
 	NSLog(@"Scoring Did finish with results: %@", results);
+	
+	NSDictionary *message = @{ @"Type" : @"AfterGame", @"Red" : [results objectForKey:@"Red"], @"Blue" : [results objectForKey:@"Blue"] };
+	NSError *error = nil;
+	NSData *messageData = [NSJSONSerialization dataWithJSONObject:message options:NSJSONWritingPrettyPrinted error:&error];
+	if (!error)
+	{
+		error = nil;
+		[_server sendData:messageData error:&error];
+		if (error)
+		{
+			NSLog(@"Error sending AfterGame message");
+		}
+	}
+	else
+	{
+		NSLog(@"Error creating JSON for AfterGame message");
+	}
+	
 	_afterView = nil;
 	[self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
