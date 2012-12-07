@@ -12,7 +12,7 @@
 
 + (UIColor *)vexBlueColor
 {
-	return [UIColor colorWithRed:0.16796875f green:0.36328125 blue:0.80078125 alpha:1.0f];
+	return [UIColor colorWithRed:0.109375 green:0.4609375 blue:0.6953125 alpha:1.0f];
 }
 
 + (UIColor *)vexRedColor

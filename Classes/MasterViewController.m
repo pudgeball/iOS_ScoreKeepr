@@ -13,7 +13,7 @@
 
 @interface MasterViewController ()
 {
-    NSMutableArray *_objects;
+    NSMutableArray *_serverList;
 }
 @end
 
@@ -25,7 +25,7 @@
     if (self) {
 		self.title = @"Vex";
 		
-		_objects = [[NSMutableArray alloc] init];
+		_serverList = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -46,17 +46,24 @@
 	{
 		NSLog(@"Started server again");
 	}
+	
+	[[self tableView] reloadData];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
-	 [_objects removeAllObjects];
+	[self emptyServerList];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)emptyServerList
+{
+	[_serverList removeAllObjects];
 }
 
 #pragma mark - Table View
@@ -68,7 +75,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return _objects.count;
+	return _serverList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,7 +88,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-	cell.textLabel.text = [[_objects objectAtIndex:indexPath.row] name];
+	cell.textLabel.text = [[_serverList objectAtIndex:indexPath.row] name];
     return cell;
 }
 
@@ -92,19 +99,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[_delegate connectToService:[_objects objectAtIndex:indexPath.row]];
+	[_delegate connectToService:[_serverList objectAtIndex:indexPath.row]];
 }
 
 - (void)serviceAdded:(NSNetService *)service moreComing:(BOOL)more
 {
-	[_objects addObject:service];
+	[_serverList addObject:service];
     if(!more) [[self tableView] reloadData];
 }
 
 - (void)serviceRemoved:(NSNetService *)service moreComing:(BOOL)more
 {
-	[_objects removeObject:service];
-    if(!more) [self.tableView reloadData];
+	[_serverList removeObject:service];
+    if(!more) [[self tableView] reloadData];
 }
 
 @end

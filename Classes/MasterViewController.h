@@ -18,5 +18,6 @@
 
 - (void)serviceAdded:(NSNetService *)service moreComing:(BOOL)more;
 - (void)serviceRemoved:(NSNetService *)service moreComing:(BOOL)more;
+- (void)emptyServerList;
 
 @end

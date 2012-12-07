@@ -26,11 +26,11 @@
 	{
 		self.title = @"Vex";
 		
-		UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
+		UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
 		[scrollView setContentSize:CGSizeMake(320, 640)];
 		[scrollView setBackgroundColor:[UIColor vexBlueColor]];
 		
-		_afterView = [[AfterView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, scrollView.contentSize.height)];
+		_afterView = [[AfterView alloc] initWithFrame:CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
 		[_afterView.finishedScoring addTarget:self
 									   action:@selector(scoringFinished)
 							 forControlEvents:UIControlEventTouchUpInside];
