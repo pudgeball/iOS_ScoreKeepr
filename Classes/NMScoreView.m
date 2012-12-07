@@ -77,11 +77,6 @@
 	NSLog(@"Counter Updated: %f", sender.value);
 	
 	[_score setText:[NSString stringWithFormat:@"%i", (int)_counter.value]];
-	
-	if ([[self delegate] respondsToSelector:@selector(scoreWasUpdatedToValue:)])
-	{
-		[[self delegate] scoreWasUpdatedToValue:[NSNumber numberWithDouble:sender.value]];
-	}
 }
 
 @end
