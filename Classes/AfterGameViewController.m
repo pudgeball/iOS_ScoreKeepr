@@ -8,6 +8,7 @@
 
 #import "AfterGameViewController.h"
 #import "AppDelegate.h"
+#import "NMScoreView.h"
 
 @interface AfterGameViewController ()
 
@@ -29,10 +30,24 @@
 {
     [super viewDidLoad];
 	
-	_contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-	_contentView.contentSize = CGSizeMake(320, 715);
+	//_contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+	//_contentView.contentSize = CGSizeMake(320, 715);
 	
-	[[self view] addSubview:_contentView];
+	UIScrollView *scrollView1 = [[UIScrollView alloc] init];
+	[scrollView1 setBackgroundColor:[UIColor redColor]];
+	scrollView1.frame = CGRectMake(0, 0, 320, 300);
+	scrollView1.contentSize = CGSizeMake(320, 600);
+	
+	UIView *view1 = [[UIView alloc] init];
+	view1.frame = CGRectMake(0, 0, 320, 100);
+	view1.backgroundColor = [UIColor blueColor];
+	
+//	[scrollView1 addSubview:view1];
+	
+	NMScoreView *scoreView = [[NMScoreView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) withAlliance:RedAlliance];
+	[scrollView1 addSubview:scoreView];
+	
+	[[self view] addSubview:scrollView1];
 }
 
 - (void)didReceiveMemoryWarning

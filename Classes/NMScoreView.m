@@ -7,10 +7,13 @@
 //
 
 #import "NMScoreView.h"
+#import "UIColor+VexColor.h"
 
 @interface NMScoreView ()
 
 @property (strong, nonatomic) UIStepper *counter;
+@property (strong, nonatomic) UILabel *title;
+@property (strong, nonatomic) UILabel *score;
 
 - (void)counterUpdated:(UIStepper *)sender;
 
@@ -18,29 +21,67 @@
 
 @implementation NMScoreView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance *)alliance
 {
     self = [super initWithFrame:frame];
     if (self)
 	{
 		_counter = [[UIStepper alloc] init];
-		[_counter addTarget:self action:@selector(counterUpdated:) forControlEvents:UIControlEventValueChanged];
+		[_counter addTarget:self
+					 action:@selector(counterUpdated:)
+		   forControlEvents:UIControlEventValueChanged];
+		
+		_title = [[UILabel alloc] init];
+		[_title setFont:[UIFont boldSystemFontOfSize:17.0f]];
+		[_title setTextColor:[UIColor whiteColor]];
+		[_title setTextAlignment:NSTextAlignmentCenter];
+		
+		if (alliance == RedAlliance)
+		{
+			[_title setBackgroundColor:[UIColor redColor]];
+			[_title setText:@"Red"];
+		}
+		else
+		{
+			[_title setBackgroundColor:[UIColor blueColor]];
+			[_title setText:@"Blue"];
+		}
+		
+		_score = [[UILabel alloc] init];
+		[_score setFont:[UIFont boldSystemFontOfSize:17.0f]];
+		[_score setBackgroundColor:[UIColor vexYellowColor]];
+		[_score setTextAlignment:NSTextAlignmentCenter];
+		[_score setText:[NSString stringWithFormat:@"%i", (int)_counter.value]];
+
+		[self setBackgroundColor:[UIColor vexYellowColor]];
+		[self setFrame:CGRectMake(frame.origin.x, frame.origin.y, 160, 130)];
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+	NSLog(@"layoutSubviews was called");
+	
+	[_title setFrame:CGRectMake(0, 20, 160, 20)];
+	[_score setFrame:CGRectMake(0, 50, 160, 20)];
+	[_counter setFrame:CGRectMake(33, 85, 160, 50)];
+	
+	[self addSubview:_title];
+	[self addSubview:_score];
+	[self addSubview:_counter];
 }
 
 - (void)counterUpdated:(UIStepper *)sender
 {
 	NSLog(@"Counter Updated: %f", sender.value);
+	
+	[_score setText:[NSString stringWithFormat:@"%i", (int)_counter.value]];
+	
+	if ([[self delegate] respondsToSelector:@selector(scoreWasUpdatedToValue:)])
+	{
+		[[self delegate] scoreWasUpdatedToValue:[NSNumber numberWithDouble:sender.value]];
+	}
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

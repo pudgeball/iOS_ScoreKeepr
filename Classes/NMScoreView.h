@@ -8,6 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, NMAlliance) {
+	RedAlliance,
+	BlueAlliance
+};
+
+@protocol NMScoreViewDelegate;
+
 @interface NMScoreView : UIView
+
+@property (nonatomic, weak) id <NMScoreViewDelegate> delegate;
+
+- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance *)alliance;
+
+@end
+
+
+@protocol NMScoreViewDelegate <NSObject>
+
+@required
+
+- (void)scoreWasUpdatedToValue:(NSNumber *)score;
 
 @end
