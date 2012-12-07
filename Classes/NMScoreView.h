@@ -15,6 +15,8 @@ typedef NS_ENUM(NSInteger, NMAlliance) {
 
 @interface NMScoreView : UIView
 
-- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance *)alliance;
+- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance )alliance;
+
+- (NSNumber *)getScore;
 
 @end

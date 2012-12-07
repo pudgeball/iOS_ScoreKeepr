@@ -21,7 +21,7 @@
 
 @implementation NMScoreView
 
-- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance *)alliance
+- (id)initWithFrame:(CGRect)frame withAlliance:(NMAlliance )alliance
 {
     self = [super initWithFrame:frame];
     if (self)
@@ -60,9 +60,7 @@
 }
 
 - (void)layoutSubviews
-{
-	NSLog(@"layoutSubviews was called");
-	
+{	
 	[_title setFrame:CGRectMake(0, 20, 160, 20)];
 	[_score setFrame:CGRectMake(0, 50, 160, 20)];
 	[_counter setFrame:CGRectMake(33, 85, 160, 50)];
@@ -74,9 +72,12 @@
 
 - (void)counterUpdated:(UIStepper *)sender
 {
-	NSLog(@"Counter Updated: %f", sender.value);
-	
 	[_score setText:[NSString stringWithFormat:@"%i", (int)_counter.value]];
+}
+
+- (NSNumber *)getScore
+{
+	return [NSNumber numberWithInt:(int)_counter.value];
 }
 
 @end

@@ -10,6 +10,7 @@
 
 @interface UIColor (VexColor)
 
++ (UIColor *)vexBlueColor;
 + (UIColor *)vexRedColor;
 + (UIColor *)vexYellowColor;
 

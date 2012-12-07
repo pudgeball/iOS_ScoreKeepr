@@ -14,7 +14,6 @@
 		DEC41A59166FFE9500E33932 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A58166FFE9500E33932 /* DetailViewController.xib */; };
 		DEC41A5B166FFEE500E33932 /* AutonomousViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */; };
 		DEC41A5D166FFEEB00E33932 /* InGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */; };
-		DEC41A5F166FFEF300E33932 /* AfterGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */; };
 		DEC41A6C1670000E00E33932 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC41A6B1670000D00E33932 /* MasterViewController.m */; };
 		DEC41A6F1670003200E33932 /* InGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC41A6E1670002F00E33932 /* InGameViewController.m */; };
 		DEC41A731670005200E33932 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC41A721670005200E33932 /* AppDelegate.m */; };
@@ -46,7 +45,6 @@
 		DEC41A58166FFE9500E33932 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Resources/Interface/DetailViewController.xib; sourceTree = SOURCE_ROOT; };
 		DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AutonomousViewController.xib; path = Resources/Interface/AutonomousViewController.xib; sourceTree = SOURCE_ROOT; };
 		DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InGameViewController.xib; path = Resources/Interface/InGameViewController.xib; sourceTree = SOURCE_ROOT; };
-		DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AfterGameViewController.xib; path = Resources/Interface/AfterGameViewController.xib; sourceTree = SOURCE_ROOT; };
 		DEC41A6A1670000D00E33932 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = Classes/MasterViewController.h; sourceTree = SOURCE_ROOT; };
 		DEC41A6B1670000D00E33932 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = Classes/MasterViewController.m; sourceTree = SOURCE_ROOT; };
 		DEC41A6D1670002F00E33932 /* InGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InGameViewController.h; path = Classes/InGameViewController.h; sourceTree = SOURCE_ROOT; };
@@ -132,7 +130,6 @@
 				DEC41A58166FFE9500E33932 /* DetailViewController.xib */,
 				DEC41A5A166FFEE500E33932 /* AutonomousViewController.xib */,
 				DEC41A5C166FFEEB00E33932 /* InGameViewController.xib */,
-				DEC41A5E166FFEF300E33932 /* AfterGameViewController.xib */,
 				DE87AD3E16715816000E5E72 /* NMScoreView.h */,
 				DE87AD3F16715816000E5E72 /* NMScoreView.m */,
 				DE87AD741671780D000E5E72 /* AfterView.h */,
@@ -284,7 +281,6 @@
 				DEC41A59166FFE9500E33932 /* DetailViewController.xib in Resources */,
 				DEC41A5B166FFEE500E33932 /* AutonomousViewController.xib in Resources */,
 				DEC41A5D166FFEEB00E33932 /* InGameViewController.xib in Resources */,
-				DEC41A5F166FFEF300E33932 /* AfterGameViewController.xib in Resources */,
 				DEC41A87167000D500E33932 /* Default-568h@2x.png in Resources */,
 				DEC41A88167000D500E33932 /* Default.png in Resources */,
 				DEC41A89167000D500E33932 /* Default@2x.png in Resources */,

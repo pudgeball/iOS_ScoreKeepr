@@ -121,7 +121,7 @@
 {
 	NSLog(@"InGame Ended with Results: %@", results);
 	_ingameView = nil;
-	_afterView = [[AfterGameViewController alloc] initWithNibName:@"AfterGameViewController" bundle:nil];
+	_afterView = [[AfterGameViewController alloc] init];
 	_afterView.delegate = self;
 	[self.modalNavigationController pushViewController:_afterView animated:YES];
 }
